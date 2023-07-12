@@ -1,0 +1,27 @@
+.Logo{
+    position: relative;
+    left: 5%;
+    width: 90px;
+    top: 15px;
+}
+
+@media screen and (max-width: 768px){
+    #logo-img {
+        width: 60%;
+    }
+}
+
+.Header{
+    width: 100%;
+    margin-top: 30px;
+    top: 0;
+    position: absolute;
+    z-index: 22;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 768px){
+     .Header {
+        margin-top: 15px;
+        }
+}

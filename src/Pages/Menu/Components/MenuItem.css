@@ -1,0 +1,113 @@
+
+.one {
+    background-image: url(../../../assets/menuitem1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.three img{
+    width: 135px;
+}
+.five img{
+    width: 135px;
+}
+
+.two{
+    background-image: url(../../../assets/menuitem2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+.three{
+    background-image: url(../../../assets/menuitem3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.four{
+    background-image: url(../../../assets/menuitem4.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.five{
+    background-image: url(../../../assets/menuitem5.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.image_wrapper{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
+    z-index: 4;
+    font-family: GLKirovi-Bold;
+    font-size: 30px;
+    line-height: 20px;
+    transition: .7s;
+}
+
+.one:hover .image_wrapper{
+    top: calc(80% - 30px);
+    transition: .7s;
+}
+.two:hover .image_wrapper{
+    top: calc(80% - 30px);
+    transition: .7s;
+}
+.three:hover .image_wrapper{
+    top: calc(80% - 30px);
+    transition: .7s;
+}
+ .four:hover .image_wrapper{
+    top: calc(80% - 30px);
+    transition: .7s;
+}
+ .five:hover .image_wrapper{
+    top: calc(80% - 30px);
+    transition: .7s;
+}
+
+.image_wrapper>img {
+    position: relative;
+    right: 0;
+    left: 0;
+    position: relative;
+    height: 40px;
+}
+
+@media screen and (max-width: 768px){
+    .five, .four, .one, .three, .two {
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .five .image_wrapper{
+        top: 50%
+    }
+    .four .image_wrapper{
+        top: 50%
+    }
+    .three .image_wrapper{
+        top: 50%
+    }
+    .two .image_wrapper{
+        top: 50%
+    }
+    .one .image_wrapper{
+        top: 50%
+    }
+    
+}
