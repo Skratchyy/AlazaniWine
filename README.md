@@ -38,4 +38,4 @@ STATUS: DONE √
     + STATUS: DONE √
     </span>
     9. ჩვენს შესახებ გვერდი...
-    `<Route path="/about-us" element={<AboutUs />} />`
+    <Route path="/about-us" element={<AboutUs />} />
