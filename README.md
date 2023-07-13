@@ -1,15 +1,16 @@
 პროგრესი :
 
+    ```diff
     STATUS: DONE √
-    1. გვერდი რასაც მომხმარებელი პირველს ხედავს, ასაკობრივ შეზღუდვაზე
+    + 1. გვერდი რასაც მომხმარებელი პირველს ხედავს, ასაკობრივ შეზღუდვაზე
     თანხმობა...
     <Route path="/" element={<AgeRestriction />} /> </Link>
-
+    ```
     STATUS: IN PROGRESS...
     2. მთავარი გვერდი სადაც განთავსდება ყველა კომპონენტის გარკვეული ნაწილი...
     <Route path="/home" element={<HomePage />} />
 
-    STATUS: DONE √
+    STATUS: IN PROGRESS...
     3. ღვინის მეხსიერების გვერდი...
     <Route path="/memory" element={<WineMemory />} />
 
@@ -33,3 +34,9 @@
     STATUS: IN PROGRESS...
     8. ბლოგი სადაც დაიდება სხვადასხვა სტატიები...
     <Route path="/blog" element={<Blog />} />
+
+    ```diff
+    + STATUS: DONE √
+    9. ჩვენს შესახებ გვერდი...
+    <Route path="/about-us" element={<AboutUs />} />
+    ```
