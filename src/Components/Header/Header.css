@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'GLKirovi-Bold';
+    src: url('../../assets/fonts/gl-kirovi-bold.ttf') format('truetype');
+    /* Add more src declarations if you have different font file formats */
+    /* Specify other properties like font-weight and font-style if needed */
+  }
+
+
+.Logo{
+    position: relative;
+    left: 5%;
+    width: 90px;
+    top: 15px;
+}
+
+
+
+@media screen and (max-width: 768px){
+    #logo-img {
+        width: 60%;
+    }
+}
+
+.Header{
+    width: 100%;
+    margin-top: 30px;
+    top: 0;
+    position: absolute;
+    z-index: 22;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 768px){
+     .Header {
+        margin-top: 15px;
+        }
+}
+
+.nav {
+    font-size: 25px;
+    padding-top: 0%;
+    font-family: GLKirovi-Bold;   
+    display: flex;
+    align-items: center;
+    margin-right: 4%;
+}
+
+.Link {
+    text-decoration: none;
+    color: #fff;   
+    margin-right: 20px;
+}
+
+.flag {
+    width: 40px;
+    display: block;
+    margin-top: 20px
+}
+
+.language{
+   margin-top: 35px;
+   height: 100px;
+   width: 40px;
+   cursor: pointer;
+}
+
+.en-flag{
+   opacity: 0;
+   z-index: 0;
+
+}
+.ka-flag:hover{
+    height: 100px;
+}
+
+.language:hover .en-flag {
+    cursor: pointer;
+    opacity: 1;
+  }
+

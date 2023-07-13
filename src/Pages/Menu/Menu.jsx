@@ -1,5 +1,5 @@
 import MenuItem from "./Components/MenuItem";
-import Header from "./Components/Header";
+import Header from "../../Components/Header/Header";
 import "./Menu.css";
 import textOne from "../../assets/txt1.svg";
 import textTwo from "../../assets/txt2.svg";
