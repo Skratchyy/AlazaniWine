@@ -1,11 +1,10 @@
 პროგრესი :
+<span style="color:green;">
+STATUS: DONE √
+</span> 1. გვერდი რასაც მომხმარებელი პირველს ხედავს, ასაკობრივ შეზღუდვაზე  
+ თანხმობა...
+`<Route path="/" element={<AgeRestriction />} /> </Link>`
 
-    ```diff
-    STATUS: DONE √
-    + 1. გვერდი რასაც მომხმარებელი პირველს ხედავს, ასაკობრივ შეზღუდვაზე
-    თანხმობა...
-    <Route path="/" element={<AgeRestriction />} /> </Link>
-    ```
     STATUS: IN PROGRESS...
     2. მთავარი გვერდი სადაც განთავსდება ყველა კომპონენტის გარკვეული ნაწილი...
     <Route path="/home" element={<HomePage />} />
@@ -35,8 +34,8 @@
     8. ბლოგი სადაც დაიდება სხვადასხვა სტატიები...
     <Route path="/blog" element={<Blog />} />
 
-    ```diff
+<span style="color:green;">
     + STATUS: DONE √
+    </span>
     9. ჩვენს შესახებ გვერდი...
-    <Route path="/about-us" element={<AboutUs />} />
-    ```
+    `<Route path="/about-us" element={<AboutUs />} />`
