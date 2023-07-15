@@ -1,15 +1,14 @@
 import "./AboutUs.css";
 import Header from "../../Components/Header/Header";
 import mainPic from "../../assets/about-us-image-main.png";
-import { useNavigate, Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaAngleLeft } from "react-icons/fa";
 function AboutUs() {
-  const navigate = useNavigate;
-  const handleGoBack = () => {
-    navigate(-1);
-  };
-
   const componentHeader = "ჩვენს შესახებ";
+
+  const location = useLocation();
+  const currentLanguage = location.pathname[1] + location.pathname[2];
+  const renderKa = currentLanguage ? true : false;
   // Description არის ტექსტი რომელიც უნდა განთავსდეს About-Us გვერდზე
   const Description = `“ალაზანი” მდებარეობს ქართული მეღვინეობისთვის ერთ-ერთ გამორჩეულ ადგილას - სოფელ კარდენახში. გადმოცემის მიხედვით, ამ სოფელში ყოველ კარზე ვენახი იყო და მისი სახელწოდებაც აქედან მოდის - “კარი” და “ვენახი” - “კარდენახი”.
 
@@ -26,21 +25,21 @@ function AboutUs() {
   ამ ეტაპზე “ალაზანი” ექსპორტზე გადის 3 კონტინენტზე (ევროპა, აზია, ჩრდილოეთ ამერიკა) და უცხოელებს სთავაზობს 34 სახეობის ქართული ღვინის დაგემოვნებას და ამით, ქართველების და ქართული ისტორიის გაცნობას. `;
 
   return (
-    <div className="about-us">
-      <Header shouldRender={true} geLang={true} />
-      <Link to="/menu" className="history">
-        <FaAngleLeft id="angleLeft" />
-        <p id="component-name">{componentHeader}</p>
+    <div className="ab-about-us">
+      <Header shouldRender={true} geLang={renderKa} />
+      <Link to="/menu" className="ab-history">
+        <FaAngleLeft id="ab-angleLeft" />
+        <p id="ab-component-name">{componentHeader}</p>
       </Link>
-      <div className="alazani-text"></div>
-      <div className="empty"></div>
-      <div className="alazani-wrapper">
-        <div className="picture">
-          <img src={mainPic} alt="Picture" className="about-picture" />
+      <div className="ab-alazani-text"></div>
+      <div className="ab-empty"></div>
+      <div className="ab-alazani-wrapper">
+        <div className="ab-picture">
+          <img src={mainPic} alt="Logo" className="ab-about-picture" />
         </div>
-        <div className="description">
-          <div className="main-text">
-            <p className="description-paragraph">{Description}</p>
+        <div className="ab-description">
+          <div className="ab-main-text">
+            <p className="ab-description-paragraph">{Description}</p>
           </div>
         </div>
       </div>

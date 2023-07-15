@@ -11,7 +11,7 @@
   }
 
 
-.ab-about-us{
+.wm-about-us{
     background-image: url("../../assets/about-bg.png");
     background-size: cover;
     width: 100%;
@@ -22,7 +22,7 @@
     position: absolute;
 }
 
-.ab-alazani-text {
+.wm-alazani-text {
     width: 96%;
     background-image: url("../../assets/about-bg-writing.png");
     background-repeat: no-repeat;
@@ -34,10 +34,10 @@
     top: -46%;
     z-index: 1;
 }
-.ab-empty{
-    height: 40%;
+.wm-empty{
+    height: 35%;
 }
-.ab-alazani-wrapper{
+.wm-alazani-wrapper{
     display: flex;
     font-size: 30px;
     position: relative;
@@ -48,11 +48,11 @@
     background-attachment: fixed;
 }
 
-.ab-about-picture {
+.wm-about-picture {
     width: 100%;
     object-fit: cover;
 }
-.ab-picture {
+.wm-picture {
     margin-top: 34px;
     width: 45%;
     margin-left: -5%;
@@ -60,16 +60,17 @@
     z-index: 2; /* Increase z-index value */
   }
   
-  .ab-description {
-    margin-top: 300px;
-    left: 25%;
+  .wm-description {
+    left: 0%;
+    height: 400px;
+    margin-top: 0;
     width: calc(100% - 25%);
     background-color: white;
     position: relative; /* Change to relative */
     z-index: 1; /* Decrease z-index value */
   }
 
-.ab-main-text{
+.wm-main-text{
     position: relative;
     z-index: 3;
     margin-left: 18%;
@@ -83,11 +84,11 @@
     width: 65%;
 }
 
-.ab-description-paragraph{
+.wm-description-paragraph{
     white-space: pre-line;
 }
 
-#ab-component-name{
+#wm-component-name{
     color: #fff;
     text-decoration: none;
     font-size: 25px;
@@ -95,12 +96,12 @@
     font-weight: 700;
     
 }
-#ab-component-name:visited{
+#wm-component-name:visited{
     text-decoration: none;
 
 }
 
-.ab-history{
+.wm-history{
     position: absolute;
     z-index: 12;
     top: 18%;
@@ -112,7 +113,7 @@
 }
 
 
-#ab-angleLeft{
+#wm-angleLeft{
     color: #fff;
     text-decoration: none;
     font-size: 25px;
@@ -123,31 +124,31 @@
 }
 
 @media screen and (max-width: 768px) {
-    .ab-history{
+    .wm-history{
         top: 10%;
     }
-    .ab-empty{
+    .wm-empty{
         height: 280px;
     }
-    .ab-alazani-text{
+    .wm-alazani-text{
         display: none;
     }
-    .ab-alazani-wrapper{
+    .wm-alazani-wrapper{
         display: block;
         position: relative;
         font-size: 0;
     }
-    .ab-picture{
+    .wm-picture{
         width: 98%;
         margin-left: 1%;
         position: relative;
     }
-    .ab-description{
+    .wm-description{
         margin-top: -10px;
         position: static;
         width: 100%;
     }
-    .ab-main-text{
+    .wm-main-text{
         position: static;
         margin-left: 17%;
 

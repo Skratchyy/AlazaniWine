@@ -1,5 +1,4 @@
 import "./MenuItem.css";
-import { Link } from "react-router-dom";
 function MenuItem(props) {
   return (
     <div className={props.className}>
