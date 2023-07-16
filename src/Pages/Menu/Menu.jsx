@@ -13,19 +13,19 @@ function Menu() {
     <div className="menu">
       <Header></Header>
       <div className="menu-item-wrapper">
-        <Link className="menu-items" to="/memories">
+        <Link className="menu-items" to="/ka/wine-memory">
           <MenuItem className="one" txt={textOne}></MenuItem>
         </Link>
-        <Link className="menu-items" to="/about-us">
+        <Link className="menu-items" to="/ka/about-us">
           <MenuItem className="two" txt={textTwo}></MenuItem>
         </Link>
-        <Link className="menu-items" to="/news">
+        <Link className="menu-items" to="/ka/news">
           <MenuItem className="three" txt={textThree}></MenuItem>
         </Link>
-        <Link className="menu-items" to="/products">
+        <Link className="menu-items" to="/ka/products">
           <MenuItem className="four" txt={textFour}></MenuItem>
         </Link>
-        <Link className="menu-items" to="/contact">
+        <Link className="menu-items" to="/ka/contact">
           <MenuItem className="five" txt={textFive}></MenuItem>
         </Link>
       </div>

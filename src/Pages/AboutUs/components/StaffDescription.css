@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'GLKirovi-Bold';
+    src: url('../../../assets/fonts/gl-kirovi-bold.ttf') format('truetype');
+    /* Add more src declarations if you have different font file formats */
+    /* Specify other properties like font-weight and font-style if needed */
+  }
+
+.staff-wrapper{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.staff-title{
+    height: 55px;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: "GLKirovi-Bold";
+
+}
+
+.staff-name{
+    font-size: 15px;
+    font-family: 'GLKirovi-Bold';
+}

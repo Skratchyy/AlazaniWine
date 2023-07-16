@@ -122,6 +122,28 @@
     margin-right: 30px;
 }
 
+.staff{
+    background-color: #f1f1f1;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.staff-header{
+    font-size: 50px;
+    font-family:  FiraGO-Regular;
+    margin-top: 20px;
+}
+.staff-list{
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;    
+}
+
+
 @media screen and (max-width: 768px) {
     .ab-history{
         top: 10%;
@@ -151,6 +173,13 @@
         position: static;
         margin-left: 17%;
 
+    }
+    .staff-list{
+        flex-direction: column;
+        
+    }
+    .staff{
+        height: auto;
     }
 
 

@@ -1,0 +1,170 @@
+@font-face {
+	font-family: FiraGO-Regular;
+	src: url("../../assets/fonts/FiraGO-Regular.woff2")
+}
+
+@font-face {
+    font-family: 'GLKirovi-Bold';
+    src: url('../../assets/fonts/gl-kirovi-bold.ttf') format('truetype');
+    /* Add more src declarations if you have different font file formats */
+    /* Specify other properties like font-weight and font-style if needed */
+  }
+
+
+.ct-bg
+{
+        background-image: url("../../assets/about-bg.png");
+        background-size: cover;
+        width: 100%;
+  
+        background-attachment: fixed;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        position: absolute;
+        color: white;
+}
+  
+
+.empty{
+        height: 350px;
+}
+
+.ct-information{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ct-description{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 50%;
+    margin-left: 100px;
+}
+.ct-map{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 50%;
+}
+
+#ct-alazani{
+    font-family: FiraGO-Regular;
+    margin-bottom: 5px;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.ct-location-name{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-family: FiraGO-Regular;
+    margin-bottom: 10px;
+}
+
+.ct-socials{
+    display: flex;
+    margin-top: 70px;
+}
+
+.ct-socials{
+    display: flex;
+}
+
+.ct-fb{
+    color: white;
+    margin: 10px;
+    font-size: 25px;
+    
+}
+.ct-fb:visited{
+    text-decoration: none;
+}
+.ct-links{
+    color: white;
+}
+.active-link{
+    color: black;
+}
+
+.ct-distributors{
+    width: 60%;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.ct-distributors-header{
+    font-size: 30px;
+    font-family: FiraGO-Regular;
+    margin: 0 0 40px 30px;
+}
+
+.ct-distributors-country{
+    display: flex;
+}
+
+.ct-distributor-china{
+    font-size: 30px;
+    font-family: FiraGO-Regular;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.ct-distributor-russia{
+    font-size: 30px;
+    font-family: FiraGO-Regular;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.ct-distributor-czech{
+    font-size: 30px;
+    font-family: FiraGO-Regular;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.ct-distributor-poland{
+    font-size: 30px;
+    font-family: FiraGO-Regular;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.ct-distributor-china:hover{
+    color: #bfbfbf;
+}
+.ct-distributor-russia:hover{
+    color: #bfbfbf;
+}
+.ct-distributor-czech:hover{
+    color: #bfbfbf;
+}
+.ct-distributor-poland:hover{
+    color: #bfbfbf;
+}
+
+
+.ct-angle-left{
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.ct-distributor-china-hidden{
+    opacity: 0;
+}

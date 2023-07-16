@@ -16,7 +16,7 @@ function App() {
       <Route path="/" element={<KaRoutes />} />
       <Route path="/ka" element={<AgeRestriction />} />
       <Route path="/ka/home" element={<HomePage />} />
-      <Route path="/ka/memories" element={<WineMemory />} />
+      <Route path="/ka/wine-memory" element={<WineMemory />} />
       <Route path="/ka/news" element={<News />} />
       <Route path="/ka/products" element={<OurProducts />} />
       <Route path="/ka/contact" element={<Contact />} />

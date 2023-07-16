@@ -1,10 +1,13 @@
 import "./AboutUs.css";
+import StaffDescription from "./components/StaffDescription";
 import Header from "../../Components/Header/Header";
 import mainPic from "../../assets/about-us-image-main.png";
 import { Link, useLocation } from "react-router-dom";
 import { FaAngleLeft } from "react-icons/fa";
 function AboutUs() {
   const componentHeader = "ჩვენს შესახებ";
+  const fullName = "გუგა რამიშვილი";
+  const position = "დირექტორი";
 
   const location = useLocation();
   const currentLanguage = location.pathname[1] + location.pathname[2];
@@ -27,7 +30,7 @@ function AboutUs() {
   return (
     <div className="ab-about-us">
       <Header shouldRender={true} geLang={renderKa} />
-      <Link to="/menu" className="ab-history">
+      <Link to="/ka/menu" className="ab-history">
         <FaAngleLeft id="ab-angleLeft" />
         <p id="ab-component-name">{componentHeader}</p>
       </Link>
@@ -41,6 +44,17 @@ function AboutUs() {
           <div className="ab-main-text">
             <p className="ab-description-paragraph">{Description}</p>
           </div>
+        </div>
+      </div>
+      <div className="staff">
+        <div className="staff-header">ჩვენი პერსონალი</div>
+        <div className="staff-list">
+          <StaffDescription fullName={fullName} jobTitle={position} />
+          <StaffDescription fullName="ნიკა რამაზაშვილი" jobTitle="მენეჯერი" />
+          <StaffDescription fullName="ლანა დათაია" jobTitle="ფინანსისტი" />
+          <StaffDescription fullName="გიო მიქელაშვილი" jobTitle="მომწოდებელი" />
+          <StaffDescription fullName="ნატა გაბუნია" jobTitle="პიარ მენეჯერი" />
+          <StaffDescription fullName="ანი ტუღუში" jobTitle="დისტრიბუტორი" />
         </div>
       </div>
     </div>

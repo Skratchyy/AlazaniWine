@@ -10,7 +10,7 @@ function WineMemory() {
   return (
     <div className="wm-about-us">
       <Header shouldRender={true} geLang={renderKa} />
-      <Link to="/menu" className="wm-history">
+      <Link to="/ka/menu" className="wm-history">
         <FaAngleLeft id="wm-angleLeft" />
         <p id="wm-component-name">{componentHeader}</p>
       </Link>

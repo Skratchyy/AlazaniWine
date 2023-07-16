@@ -6,12 +6,12 @@ import enFlagActive from "../../assets/flag-en-active.svg";
 function Header({ shouldRender, geLang }) {
   return (
     <div className="Header">
-      <Link className="Logo" to="/home">
+      <Link className="Logo" to="/ka/home">
         <img id="logo-img" src={logo} alt="AlazaniWine Logo" />
       </Link>
       {shouldRender && (
         <div className="nav">
-          <Link to="/menu" className="Link">
+          <Link to="/ka/menu" className="Link">
             მენიუ
           </Link>
           {geLang ? (
