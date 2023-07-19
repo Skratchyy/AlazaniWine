@@ -1,0 +1,67 @@
+@font-face {
+	font-family: FiraGO-Regular;
+	src: url("../../../assets/fonts/FiraGO-Regular.woff2")
+}
+
+@font-face {
+    font-family: 'GLKirovi-Bold';
+    src: url('../../../assets/fonts/gl-kirovi-bold.ttf') format('truetype');
+    /* Add more src declarations if you have different font file formats */
+    /* Specify other properties like font-weight and font-style if needed */
+  }
+
+.news-card{
+    background-color: white;
+    width: 85%;
+    height: 180px;
+    border: 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-decoration: none;
+    color: black;
+}
+.news-card-context{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.news-card-picture{
+    width: 140px;
+    height: 140px;
+}
+.news-card-picture>img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.news-card-hr{
+    width: 105%;
+    border: 1px solid black;
+
+    margin-top: 0;
+}
+
+.news-card-header{
+    font-weight: 900;
+    font-size: 22px;
+    font-family: 'GLKirovi-Bold';
+}
+
+.news-card-header>p{
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.news-card-description{
+    font-size: 18px;
+    font-family: FiraGO-Regular;
+    width: 95%;
+}

@@ -1,7 +1,6 @@
 import Header from "../../Components/Header/Header";
-import { FaAngleLeft } from "react-icons/fa";
 import "./WineMemory.css";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 function WineMemory() {
   const location = useLocation();
   const currentLanguage = location.pathname[1] + location.pathname[2];
@@ -9,11 +8,12 @@ function WineMemory() {
   const componentHeader = "ღვინის მეხსიერება";
   return (
     <div className="wm-about-us">
-      <Header shouldRender={true} geLang={renderKa} />
-      <Link to="/ka/menu" className="wm-history">
-        <FaAngleLeft id="wm-angleLeft" />
-        <p id="wm-component-name">{componentHeader}</p>
-      </Link>
+      <Header
+        shouldRender={true}
+        geLang={renderKa}
+        Location={componentHeader}
+      />
+
       <div className="wm-alazani-text"></div>
       <div className="wm-empty"></div>
       <div className="wm-alazani-wrapper">

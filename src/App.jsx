@@ -8,6 +8,7 @@ import Menu from "./Pages/Menu/Menu";
 import News from "./Pages/News/News";
 import OurProducts from "./Pages/OurProducts/OurProducts";
 import WineMemory from "./Pages/WineMemory/WineMemory";
+import FullNews from "./Pages/News/Components/FullNews";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route path="/ka/home" element={<HomePage />} />
       <Route path="/ka/wine-memory" element={<WineMemory />} />
       <Route path="/ka/news" element={<News />} />
+      <Route path="/ka/news/:id" element={<FullNews />} />
       <Route path="/ka/products" element={<OurProducts />} />
       <Route path="/ka/contact" element={<Contact />} />
       <Route path="/ka/about-us" element={<AboutUs />} />

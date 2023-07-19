@@ -3,12 +3,19 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import geFlagActive from "../../assets/flag-ge-active.svg";
 import enFlagActive from "../../assets/flag-en-active.svg";
-function Header({ shouldRender, geLang }) {
+import { FaAngleLeft } from "react-icons/fa";
+function Header({ shouldRender, geLang, Location, Goto }) {
   return (
     <div className="Header">
-      <Link className="Logo" to="/ka/home">
-        <img id="logo-img" src={logo} alt="AlazaniWine Logo" />
-      </Link>
+      <div className="logo-div">
+        <Link className="Logo" to="/ka/home">
+          <img id="logo-img" src={logo} alt="AlazaniWine Logo" />
+        </Link>
+        <Link to={Goto ? Goto : "/ka/home"} className="navigator">
+          <FaAngleLeft id="ab-angleLeft" />
+          <p id="ab-component-name">{Location}</p>
+        </Link>
+      </div>
       {shouldRender && (
         <div className="nav">
           <Link to="/ka/menu" className="Link">

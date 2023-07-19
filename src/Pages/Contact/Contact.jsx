@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "../../Components/Header/Header";
-import { FaAngleLeft } from "react-icons/fa";
+import { shopLocation, factoryLocation, officeLocation } from "./locations";
 import { FaAngleRight } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
@@ -8,42 +8,27 @@ import { FaInstagram } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { useState } from "react";
+import { china, czech, rusia, poland } from "./distrubutorContacts";
 import "./Contact.css";
+import DistributorDetails from "./Component/DistributorDetails";
 function Contact() {
-  const officeLocation = (
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5959.766110741176!2d44.870395!3d41.679869!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440dd107a20453%3A0x6627aec999218ba!2s25%20Moscow%20Ave%2C%20T&#39;bilisi!5e0!3m2!1sen!2sge!4v1689517067796!5m2!1sen!2sge"
-      width="600"
-      height="450"
-      style={{ border: 0, width: "100%" }}
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  );
-  const factoryLocation = (
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d23837.54075012992!2d45.890328!3d41.683982!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sat!4v1689516031946!5m2!1sen!2sat"
-      width="600"
-      height="450"
-      style={{ border: 0, width: "100%" }}
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  );
+  const [distributorInfo, setDistributorInfo] = useState(null);
 
-  const shopLocation = (
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5957.85720375434!2d44.795505!3d41.700477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cdd6db54483%3A0x8ba27a44c7197e13!2s26%20Shota%20Rustaveli%20Ave%2C%20T&#39;bilisi!5e0!3m2!1sen!2sge!4v1689507881235!5m2!1sen!2sge"
-      width="600"
-      height="450"
-      style={{ border: 0, width: "100%" }}
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  );
+  const setChina = (e) => {
+    setDistributorInfo(china);
+  };
+
+  const setRussia = (e) => {
+    setDistributorInfo(rusia);
+  };
+
+  const setCzech = (e) => {
+    setDistributorInfo(czech);
+  };
+
+  const setPoland = (e) => {
+    setDistributorInfo(poland);
+  };
 
   const [useLocation, setLocation] = useState(officeLocation);
 
@@ -67,11 +52,12 @@ function Contact() {
   const renderKa = true;
   return (
     <div className="ct-bg">
-      <Header shouldRender={true} geLang={renderKa} />
-      <Link to="/ka/menu" className="ab-history">
-        <FaAngleLeft id="ab-angleLeft" />
-        <p id="ab-component-name">{componentHeader}</p>
-      </Link>
+      <Header
+        shouldRender={true}
+        geLang={renderKa}
+        Location={componentHeader}
+      />
+
       <div className="empty"></div>
       <div className="ct-information">
         <div className="ct-description">
@@ -158,7 +144,7 @@ function Contact() {
       <div className="ct-distributors">
         <div className="ct-distributors-header">დისტრიბუტორები</div>
         <div className="ct-distributors-country">
-          <div className="ct-distributor-china">
+          <div className="ct-distributor-china" onClick={setChina}>
             <p>ჩინეთი</p>
             <FaAngleRight className="ct-angle-left" />
             <div className="ct-distributor-china-hidden">
@@ -169,18 +155,28 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="ct-distributor-russia">
+          <div className="ct-distributor-russia" onClick={setRussia}>
             <p>რუსეთი</p>
             <FaAngleRight className="ct-angle-left" />
           </div>
-          <div className="ct-distributor-czech">
+          <div className="ct-distributor-czech " onClick={setCzech}>
             <p>ჩეხეთი</p>
             <FaAngleRight className="ct-angle-left" />
           </div>
-          <div className="ct-distributor-poland">
+          <div className="ct-distributor-poland" onClick={setPoland}>
             <p>პოლონეთი</p>
             <FaAngleRight className="ct-angle-left" />
           </div>
+        </div>
+
+        <div className="dist-details">
+          {distributorInfo ? (
+            distributorInfo.map((info) => {
+              return <DistributorDetails obj={info} />;
+            })
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </div>

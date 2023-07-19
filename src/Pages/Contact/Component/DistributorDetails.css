@@ -1,0 +1,31 @@
+@font-face {
+	font-family: FiraGO-Regular;
+	src: url("../../../assets/fonts/FiraGO-Regular.woff2")
+}
+
+.dist-det-div{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    font-family: FiraGO-Regular;
+}
+
+.distrubutor-detail-header{
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.distrubutor-detail__{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.distrubutor-detail__>span{
+    margin-right: 10px;
+}
+
+.distrubutor-detail-link{
+    text-decoration: none ;
+    color: white;
+    margin-left: 50px;
+}

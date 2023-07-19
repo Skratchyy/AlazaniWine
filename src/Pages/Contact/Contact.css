@@ -95,18 +95,20 @@
 
 .ct-distributors{
     width: 60%;
-    height: 400px;
     margin-top: 50px;
+    margin-left: 50px;
 }
 
 .ct-distributors-header{
     font-size: 30px;
     font-family: FiraGO-Regular;
     margin: 0 0 40px 30px;
+    
 }
 
 .ct-distributors-country{
     display: flex;
+    margin-left: 30px;
 }
 
 .ct-distributor-china{

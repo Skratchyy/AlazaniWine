@@ -13,7 +13,7 @@
     3. ღვინის მეხსიერების გვერდი...
     <Route path="/wine-memory" element={<WineMemory />} />
 
-    STATUS: IN PROGRESS...
+    STATUS: DONE √
     4. სიახლეების გვერდი..
     <Route path="/news" element={<News />} />
 
@@ -21,7 +21,7 @@
     5. ჩვენი პროდუქტების გვერდი...
     <Route path="/products" element={<OurProducts />} />
 
-    STATUS: IN PROGRESS...
+    STATUS: DONE √
     6. საკონტაქტო ინფორმაციის გვერდი...
     <Route path="/contact" element={<Contact />} />
 
