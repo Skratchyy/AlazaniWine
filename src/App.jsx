@@ -1,4 +1,5 @@
 import KaRoutes from "./Language/ka";
+import ProductDetails from "./Pages/OurProducts/ProductDetails/ProductDetails";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import AgeRestriction from "./Pages/AgeRestriction/AgeRestriction";
 import Blog from "./Pages/Blog/Blog";
@@ -21,6 +22,7 @@ function App() {
       <Route path="/ka/news" element={<News />} />
       <Route path="/ka/news/:id" element={<FullNews />} />
       <Route path="/ka/products" element={<OurProducts />} />
+      <Route path="/ka/products/:id" element={<ProductDetails />} />
       <Route path="/ka/contact" element={<Contact />} />
       <Route path="/ka/about-us" element={<AboutUs />} />
       <Route path="/ka/blog" element={<Blog />} />

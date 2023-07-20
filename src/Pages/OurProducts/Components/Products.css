@@ -1,0 +1,80 @@
+
+@font-face {
+	font-family: FiraGO-Regular;
+	src: url("../../../assets/fonts/FiraGO-Regular.woff2")
+}
+
+.products {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 7px;
+	width: 84%;
+	margin: 0 auto;
+	z-index: 25;
+    height: 465px;
+    position: relative;
+    background-color: white;
+}
+.products>.title-img img {
+	padding: 6% 5%;
+	padding-bottom: 0;
+	height: inherit;
+	position: inherit;
+	height: 115px
+}
+.products:last-child {
+	margin-bottom: 60px
+}
+
+.product-txt {
+	width: 70%
+}
+
+.product-txt p {
+	padding: 40px 0 100px 0;
+	margin-left: 7%;
+    font-size: 20px;
+	font-family: FiraGO-Regular
+}
+
+.hg{
+    position: absolute;
+    padding: 0;
+    top: 25px;
+    object-fit: contain;
+    right: 60px;
+    height: 400px;
+    z-index: -100;
+}
+@media screen and (max-width: 990px){
+    .products>.title-img img {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .products {
+        width: 98%;
+        margin: 0 auto;
+        margin-top: 6%;
+    }
+    .hg{
+        display: none;
+    }
+    .product-txt{
+        width: 100%
+    }
+    .title-img{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    }
+    .product-txt p{
+        margin-top: 40px;
+        font-size: 18px;
+    }
+    .products>.title-img img{
+        width: 100%;
+    }
+}
+
+

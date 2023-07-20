@@ -1,0 +1,181 @@
+@font-face {
+	font-family: FiraGO-Regular;
+	src: url("../../../assets/fonts/FiraGO-Regular.woff2")
+}
+
+.product-details__bg{
+    background-image: url("../../../assets/about-bg.png");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: absolute;
+    
+}
+.product-details__main{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 47%;
+    background-color: white;
+    width: 88%;
+    top: 40%;
+    z-index: 1;
+}
+
+.product-details__footer{
+    position: relative;
+    height: 13%;
+    background-color: white;
+    width: 100%;
+    top: 40%;
+    z-index: 1;
+    box-shadow: 0 -1px 1px -1px #333;
+}
+
+.product-detail__wineImage{
+    position: relative;
+    bottom: 55%;
+    width: 40%;
+}
+
+.product-detail__wineList{
+    width: 50%;
+    align-self: first baseline;
+    position: relative;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.product-detail__wineImage>img{
+    height:700px;
+}
+
+.product-detail__wineDescription{
+    margin-right: 5%;
+    position: relative;
+    margin-top: 1%;
+    width: 95%;
+}
+
+li{
+    cursor: pointer;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    color: #021d49;
+    padding-top: 7px;
+    font-family: FiraGO-Regular;
+    font-size: 18px;
+    opacity: 50%;
+}
+
+li:hover{
+    opacity: 100%;
+}
+.active-product{
+    opacity: 100%;
+}
+
+.product-detail__text_description p{
+    color: #021d49;
+    padding-top: 7px;
+    font-family: FiraGO-Regular;
+    font-size: 18px;
+}
+
+.product-detail__header>p{
+    margin-bottom: 10px;
+    font-family: GLKirovi-Bold;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.product-detail__Alcohol{
+    font-weight: bold;
+    font-family: FiraGO-Regular;
+    color: #021D49;
+}
+
+.product-details__footer{
+    display: flex;
+}
+.product-details__footer>div{
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    width: 20%;
+    z-index: 100;
+    padding: 20px 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-details__footer>div>img{
+    height: 70%;
+    }
+
+
+.active-brand{
+    border-top: 4px solid #021d49
+}
+
+@media screen and (max-width: 998px){
+    .product-detail__wineImage>img{
+        height: 600px;
+        
+    }
+    .product-detail__wineImage{
+        width: 30%;
+        bottom: 37%;
+    }
+    .product-detail__wineDescription{
+        width: 110%;
+    }
+}
+
+@media screen and (max-width: 998px){
+    .product-detail__wineImage>img{
+        height: 500px;
+        
+    }
+    .product-detail__wineImage{
+        width: 20%;
+        bottom: 27%;
+    }
+    .product-detail__wineDescription{
+        width: 110%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .product-details__main{
+        display: block;
+        height: auto;
+        width: 100%;
+        top: 25%;
+    }
+    .product-detail__wineList{
+        height: auto;
+    }
+    .product-detail__wineDescription{
+        width: 100%;
+    }
+    .product-detail__wineImage{
+        margin-left: 30%;
+    }
+
+    .product-details__footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-details__footer>div>img{
+        height: 55px;
+    }
+}
