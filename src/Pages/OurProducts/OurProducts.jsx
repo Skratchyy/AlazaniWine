@@ -2,34 +2,62 @@ import Header from "../../Components/Header/Header";
 import "./OurProducts.css";
 import { useState, useEffect } from "react";
 import Products from "./Components/Producs";
+import { useLocation } from "react-router";
 function News() {
+  const isLocation = useLocation().pathname;
+  const currentLanguage = isLocation[1] + isLocation[2];
+  const renderKa = isLocation[1] + isLocation[2] === "ka";
+
   const [brands, setBrands] = useState([]);
   const [isLoading, setIsloading] = useState(true);
 
   const fetchBrands = async () => {
     const brands = await (
-      await fetch("https://testnode-c6yj.onrender.com/brands")
+      await fetch("https://alazanibackend.onrender.com/brands/")
     ).json();
     setBrands(brands);
     setIsloading(false);
   };
-
   useEffect(() => {
     fetchBrands();
   }, []);
 
   if (isLoading) return "Loading...";
 
-  const currentLocation = "ჩვენი პროდუქტები";
+  const currentLocation = "ბრენდები";
+  const currentLocationEn = "Brands";
+
+  console.log(brands);
   return (
-    <div className="products-bg">
-      <Header geLang={true} shouldRender={true} Location={currentLocation} />
-      <div className="empty"></div>
-      {brands.data.map((eachBrand) => {
-        return <Products productObj={eachBrand} />;
-      })}
-      <div className="pr-alazani-text"></div>
-    </div>
+    <>
+      {renderKa ? (
+        <div className="products-bg">
+          <Header
+            geLang={true}
+            shouldRender={true}
+            Location={currentLocation}
+          />
+          <div className="empty"></div>
+          {brands.map((eachBrand) => {
+            return <Products productObj={eachBrand} />;
+          })}
+          <div className="pr-alazani-text"></div>
+        </div>
+      ) : (
+        <div className="products-bg">
+          <Header
+            geLang={false}
+            shouldRender={true}
+            Location={currentLocationEn}
+          />
+          <div className="empty"></div>
+          {brands.map((eachBrand) => {
+            return <Products productObj={eachBrand} />;
+          })}
+          <div className="pr-alazani-text"></div>
+        </div>
+      )}
+    </>
   );
 }
 

@@ -1,0 +1,49 @@
+About-Us:
+    Image,
+    Short Description In Georgian,
+    Short Description In English,
+    Full Description In Georgian,
+    Full Description In English,
+
+Wine-Memory:
+    Image,
+    Short Description In Georgian,
+    Short Description In English,
+    Full Description In Georgian,
+    Full Description In English
+
+
+News : 
+    News-Edit: 
+        Image,
+        Title In Georgian,
+        Title In English,
+        Short Description In Georgian,
+        Short Description In English,
+        Full Description In Georgian,
+        Full Description In English
+    News-Delete
+    News-Add: Same as edit...
+
+Brand :
+    Edit,Delete,
+
+
+    Logo Of Brand
+    Bottle Image
+    Full Description In Georgian 
+    Full Description In English 
+
+
+Contacts :
+    Phone Number #1 
+    Email Address 
+    Facebook Page URL 
+    Instagram Page URL 
+    Factory Address In Georgian 
+    Factory Address In English 
+    Office Address In Georgian 
+    Office Address In English 
+    Shop Address In Georgian 
+    Shop Address In English 
+

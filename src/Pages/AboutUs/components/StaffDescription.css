@@ -26,3 +26,20 @@
     font-size: 15px;
     font-family: 'GLKirovi-Bold';
 }
+
+.staff-favWine{
+    height: auto;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px)  {
+    .staff-wrapper{
+        height: 250px;
+        border-bottom: 1px groove black;
+    }
+    
+}

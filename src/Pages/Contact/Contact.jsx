@@ -56,6 +56,7 @@ function Contact() {
         shouldRender={true}
         geLang={renderKa}
         Location={componentHeader}
+        Goto={"/ka/menu"}
       />
 
       <div className="empty"></div>

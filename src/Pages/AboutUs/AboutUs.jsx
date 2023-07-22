@@ -31,11 +31,13 @@ function AboutUs() {
   // Description არის ტექსტი რომელიც უნდა განთავსდეს About-Us გვერდზე
   return (
     <div className="ab-about-us">
-      <Header shouldRender={true} geLang={true} />
-      <Link to="/ka/menu" className="ab-history">
-        <FaAngleLeft id="ab-angleLeft" />
-        <p id="ab-component-name">{componentHeader}</p>
-      </Link>
+      <Header
+        shouldRender={true}
+        geLang={true}
+        Location={componentHeader}
+        Goto={"/ka/menu"}
+      />
+
       <div className="ab-alazani-text"></div>
       <div className="ab-empty"></div>
       <div className="ab-alazani-wrapper">
