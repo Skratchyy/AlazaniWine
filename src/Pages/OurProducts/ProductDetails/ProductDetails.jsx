@@ -2,22 +2,39 @@ import Header from "../../../Components/Header/Header";
 import "./ProductDetails.css";
 import { useLocation } from "react-router";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
-function ProductDetails() {
-  const [toRender, setTorender] = useState(null);
+import ActiveProductItem from "../Components/ActiveComponent";
+import ActiveBrand from "../Components/ActiveBrand";
+function ProductDetails(porps) {
   const currentPath = useLocation().pathname;
-  const lastSlashIndex = currentPath.lastIndexOf("/");
-  const cutOffPath = currentPath.substring(0, lastSlashIndex + 1);
-
+  const curentId = currentPath.split("/")[4];
   const idTorender = currentPath.split("/")[3];
-
+  const currentLanguage = currentPath.split("/")[1];
+  const [toRender, setTorender] = useState(null);
   const [products, setProducts] = useState([]);
   const [isLoading, setIsloading] = useState(true);
-  const currentLanguage = currentPath.split("/")[1];
-
   const [brandName, setBrandName] = useState("");
-
+  const [brands, setBrands] = useState("");
+  ////////////////////////////////////// Current path filtered without product id //////////////////////////////////////
+  let myString = currentPath;
+  let parts = myString.split("/");
+  parts.pop();
+  let result = parts.join("/");
+  ///////////////////////////////////// /////////////////////////////////// //////////////////////////////////
+  const fetchToRender = async () => {
+    const toRender = await (
+      await fetch(
+        `https://alazanibackend.onrender.com/brands/${idTorender}/products/${curentId}`
+      )
+    ).json();
+    setTorender(toRender);
+    setIsloading(false);
+  };
+  const getBrands = async () => {
+    const brandsDetail = await (
+      await fetch(`https://alazanibackend.onrender.com/brands/`)
+    ).json();
+    setBrands(brandsDetail);
+  };
   const getBrandName = async () => {
     const name = (
       await (
@@ -27,24 +44,6 @@ function ProductDetails() {
 
     setBrandName(name);
   };
-
-  const fetchToRender = async () => {
-    const toRender = await (
-      await fetch(
-        `https://alazanibackend.onrender.com/brands${cutOffPath}${idTorender}`
-      )
-    ).json();
-    setTorender(toRender);
-    setIsloading(false);
-  };
-  useEffect(() => {
-    fetchToRender();
-  }, []);
-
-  useEffect(() => {
-    getBrandName();
-  }, []);
-
   const fetchProducts = async () => {
     const product = await (
       await fetch(
@@ -56,11 +55,12 @@ function ProductDetails() {
   };
   useEffect(() => {
     fetchProducts();
-  }, []);
-
+    getBrandName();
+    fetchToRender();
+    getBrands();
+  }, [currentPath]);
+  console.log(brands);
   if (isLoading) return "Loading...";
-
-  console.log(toRender);
 
   return (
     <>
@@ -78,20 +78,14 @@ function ProductDetails() {
         <div className="product-details__main">
           <div className="product-detail__wineList">
             <ul style={{ listStyleType: "disc" }}>
-              <li className="active-product">
-                {toRender.name[currentLanguage]}
-              </li>
               {products.map((name) => {
                 return (
-                  <li>
-                    <Link
-                      onClick={0}
-                      style={{ color: "#021d49", textDecoration: "none" }}
-                      to={cutOffPath + name.id}
-                    >
-                      {name.name[currentLanguage]}
-                    </Link>
-                  </li>
+                  <ActiveProductItem
+                    key={name._id}
+                    name={name}
+                    result={result}
+                    currentLanguage={currentLanguage}
+                  />
                 );
               })}
             </ul>
@@ -111,33 +105,21 @@ function ProductDetails() {
             <div className="product-detail__Alcohol">Alc. 14% BY VOL</div>
           </div>
         </div>
+
         <div className="product-details__footer">
-          <div className="active-brand">
-            <img
-              src="https://alazaniwine.ge/images/dcf1e82268db4a5fa71d141bc13e92ab.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://alazaniwine.ge/images/8974ab5e0bbbb4461cbabc18c1f49ba8.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://alazaniwine.ge/images/0193a72cd1e5c366adc9646e2828468c.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://alazaniwine.ge/images/cc123339dc8d2f8ea44caa827197c542.png"
-              alt=""
-            />
-          </div>
+          {brands.map((brand) => {
+            return (
+              <ActiveBrand
+                key={brand._id}
+                name={brand}
+                result={result}
+                currentLanguage={currentLanguage}
+              />
+            );
+          })}
         </div>
       </div>
+      );
     </>
   );
 }

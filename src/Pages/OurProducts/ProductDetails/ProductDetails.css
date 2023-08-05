@@ -117,8 +117,12 @@ li:hover{
     align-items: center;
     justify-content: center;
 }
-.product-details__footer>div>img{
+
+.product-details__footer>div>a{
     height: 70%;
+    }
+.product-details__footer>div>a>img{
+    height: 100%;
     }
 
 
@@ -175,7 +179,7 @@ li:hover{
         flex-direction: column;
         align-items: center;
     }
-    .product-details__footer>div>img{
+    .product-details__footer>div>a>img{
         height: 55px;
     }
 }

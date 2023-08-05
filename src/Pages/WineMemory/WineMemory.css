@@ -35,7 +35,7 @@
     z-index: 1;
 }
 .wm-empty{
-    height: 35%;
+    height: 45%;
 }
 .wm-alazani-wrapper{
     display: flex;
@@ -61,8 +61,11 @@
   }
   
   .wm-description {
+    
+    overflow: hidden;
     left: 0%;
-    height: 400px;
+    min-height: 400px;
+    height: auto;
     margin-top: 0;
     width: calc(100% - 25%);
     background-color: white;
@@ -72,15 +75,15 @@
 
 .wm-main-text{
     position: relative;
-    z-index: 3;
-    margin-left: 18%;
-    margin-top: 10px;
-    margin-left: 20%;
+    z-index: 0;
+
+    margin-top: 0px;
+
     position: relative;
     padding: 40px 20px 40px 60px;
     font-family: FiraGO-Regular;
     line-height: 1.5em;
-    font-size: 22px;
+    font-size: 20px;
     width: 65%;
 }
 
@@ -123,7 +126,23 @@
     margin-right: 30px;
 }
 
+.wm-img{
+    position: absolute;
+    top: -30%;
+    right: 10%;
+    width: 30%;
+    z-index: 5;
+}
+.wm-img>img{
+    width: 100%;
+    height: 100%;
+}
+
 @media screen and (max-width: 768px) {
+    .wm-img{
+        position:  static !important;
+        width: 100%;
+    }
     .wm-history{
         top: 10%;
     }
@@ -132,11 +151,13 @@
     }
     .wm-alazani-text{
         display: none;
+        height: auto;
     }
     .wm-alazani-wrapper{
         display: block;
         position: relative;
         font-size: 0;
+        height: auto;
     }
     .wm-picture{
         width: 98%;
@@ -147,10 +168,16 @@
         margin-top: -10px;
         position: static;
         width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+    
     .wm-main-text{
         position: static;
-        margin-left: 17%;
+        
 
     }
 

@@ -16,6 +16,7 @@ import AboutUsAdmin from "./Admin/Dashboard/About-Us-admin/About-Us-Admin";
 import WineMemoryAdmin from "./Admin//Dashboard/Wine-Memoru-admin/Wine-memory-admin";
 import { Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import BrandDetails from "./Pages/OurProducts/ProductDetails/BrandDetails";
 import AdminNews from "./Admin/Dashboard/News/News";
 import { useState, useEffect } from "react";
 function App() {
@@ -57,7 +58,7 @@ function App() {
       <Route path="/ka/products">
         <Route index={true} element={<OurProducts />} />
         <Route path=":id">
-          <Route index={true} element={<Navigate to={brandName[0].id} />} />
+          <Route index={true} element={<BrandDetails />} />
           <Route path=":id" element={<ProductDetails />} />
         </Route>
       </Route>

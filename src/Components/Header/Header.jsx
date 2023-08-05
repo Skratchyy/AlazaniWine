@@ -19,10 +19,14 @@ function Header({ shouldRender, geLang, Location, Goto }) {
             <Link className="Logo" to="/ka/home">
               <img id="logo-img" src={logo} alt="AlazaniWine Logo" />
             </Link>
-            <Link to={Goto ? Goto : "/ka/menu"} className="navigator">
-              <FaAngleLeft id="ab-angleLeft" />
-              <p id="ab-component-name">{Location}</p>
-            </Link>
+            {Location ? (
+              <Link to={Goto ? Goto : "/ka/menu"} className="navigator">
+                <FaAngleLeft id="ab-angleLeft" />
+                <p id="ab-component-name">{Location}</p>
+              </Link>
+            ) : (
+              ""
+            )}
           </div>
           {shouldRender && (
             <div className="nav">
