@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/AlazaniWine/static/css/main.cf644b46.css",
+    "main.js": "/AlazaniWine/static/js/main.279864fa.js",
+    "static/js/787.14c8f949.chunk.js": "/AlazaniWine/static/js/787.14c8f949.chunk.js",
+    "static/media/background-video.mp4": "/AlazaniWine/static/media/background-video.2a6fb2704182af4e2c1f.mp4",
+    "static/media/_MG_8192.jpg": "/AlazaniWine/static/media/_MG_8192.b3f296c3d23472b601b1.jpg",
+    "static/media/IMG_2167.png": "/AlazaniWine/static/media/IMG_2167.1dc997f92d0a0e51c4c1.png",
+    "static/media/about-bg.png": "/AlazaniWine/static/media/about-bg.c88fb89ea77bed34a166.png",
+    "static/media/menuitem3.png": "/AlazaniWine/static/media/menuitem3.97d7959478f2ade4636b.png",
+    "static/media/menuitem5.png": "/AlazaniWine/static/media/menuitem5.0ca972c77a9d6111253e.png",
+    "static/media/menuitem4.png": "/AlazaniWine/static/media/menuitem4.3baf3c9a62f5d97fec08.png",
+    "static/media/menuitem2.png": "/AlazaniWine/static/media/menuitem2.e6852d8fb6b88a91344d.png",
+    "static/media/menuitem1.png": "/AlazaniWine/static/media/menuitem1.11817510e04ff21e6699.png",
+    "static/media/bg-text-colorless.png": "/AlazaniWine/static/media/bg-text-colorless.f3d5e7c6f98777945b72.png",
+    "static/media/FiraGO-Regular.woff2": "/AlazaniWine/static/media/FiraGO-Regular.1927a8d9fa8cb76d21ed.woff2",
+    "static/media/about-bg-writing.png": "/AlazaniWine/static/media/about-bg-writing.586dd277049c55d9eaa2.png",
+    "static/media/gl-kirovi-bold.ttf": "/AlazaniWine/static/media/gl-kirovi-bold.505654b18a84aaade617.ttf",
+    "static/media/agestyle.png": "/AlazaniWine/static/media/agestyle.8f39fe9867c3cacd5ce5.png",
+    "static/media/about-us-image-main.png": "/AlazaniWine/static/media/about-us-image-main.ad57e42f740796436851.png",
+    "static/media/about-us-image.png": "/AlazaniWine/static/media/about-us-image.ad57e42f740796436851.png",
+    "static/media/png": "/AlazaniWine/static/media/dcf1e82268db4a5fa71d141bc13e92ab.6f60463efbf0fa3988d5.png",
+    "static/media/txt1.svg": "/AlazaniWine/static/media/txt1.57401e2115e5cfbe7d6f10eb2876d1a9.svg",
+    "static/media/txt2.svg": "/AlazaniWine/static/media/txt2.3e3eeb1bd8c8e1134c32af457bd88fb3.svg",
+    "static/media/txt4.svg": "/AlazaniWine/static/media/txt4.b91991d03893efa6301cfb52b4b75f16.svg",
+    "static/media/txt3.svg": "/AlazaniWine/static/media/txt3.8a82772090bb8f2da8909f6af8479d87.svg",
+    "static/media/txt5.svg": "/AlazaniWine/static/media/txt5.6a70eb171761efdc6f873de9c61e8f61.svg",
+    "static/media/flag-ge-active.svg": "/AlazaniWine/static/media/flag-ge-active.f7d395a2b18410135cd080a4374cdbd3.svg",
+    "static/media/flag-ge-bw.svg": "/AlazaniWine/static/media/flag-ge-bw.7f589e44223e4de48f11f657544667de.svg",
+    "static/media/logo.svg": "/AlazaniWine/static/media/logo.663a25e4e91df665ef27e5b872cf465c.svg",
+    "static/media/flag-en-active.svg": "/AlazaniWine/static/media/flag-en-active.13d0167cd6e9b4e8eaa7c4b0a1bf08ef.svg",
+    "static/media/flag-en-bw.svg": "/AlazaniWine/static/media/flag-en-bw.0c32552db8db82155286e60f7779bdbe.svg",
+    "index.html": "/AlazaniWine/index.html",
+    "main.cf644b46.css.map": "/AlazaniWine/static/css/main.cf644b46.css.map",
+    "main.279864fa.js.map": "/AlazaniWine/static/js/main.279864fa.js.map",
+    "787.14c8f949.chunk.js.map": "/AlazaniWine/static/js/787.14c8f949.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf644b46.css",
+    "static/js/main.279864fa.js"
+  ]
+}

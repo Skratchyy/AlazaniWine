@@ -1,0 +1,20 @@
+{
+  "short_name": "ალაზანი",
+  "name": "ალაზანი ღვინის ოფიციალური ვებსაიტი",
+  "icons": [
+    {
+      "src": "apple-icon-57x57.png",
+      "type": "image/png",
+      "sizes": "57x57"
+    },
+    {
+      "src": "favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
