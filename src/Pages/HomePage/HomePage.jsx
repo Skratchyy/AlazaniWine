@@ -28,10 +28,45 @@ function HomePage() {
             <div className="home__img_memory">
               <img src={winePic} alt="" />
             </div>
-            <div className="home-page__memory_desc home_descr"></div>
+            <div className="home-page__memory_desc home_descr">
+              <div className="home-page__header">
+                <p className="bold__header">ღვინის</p>
+                <p className="italic__header">მეხსიერება</p>
+              </div>
+              <hr id="home_hr_txt" />
+              <div className="home-page__description">
+                <p>
+                  ალაზნის ღვინის მეხსიერება მოდის რამოდენიმე ათწლეული და მას
+                  აქვს დიდი ისტორია, რომელიც შენარჩუნებული იქნა მთელი ეს დრო.
+                </p>
+              </div>
+              <div className="home-page__button">
+                <button>წაკითხვა</button>
+              </div>
+            </div>
           </div>
           <div className="home-page__about">
-            <div className="home-page__about_desc home_descr"></div>
+            <div className="home-page__about_desc home_descr">
+              <div className="home-page__header" style={{ marginTop: "-40px" }}>
+                <p className="bold__header">ჩვენ</p>
+                <p className="italic__header">შესახებ</p>
+              </div>
+              <hr id="home_hr_txt" />
+              <div className="home-page__description about__home__txt">
+                <p>
+                  “ალაზანი” მდებარეობს ქართული მეღვინეობისთვის ერთ-ერთ გამორჩეულ
+                  ადგილას - სოფელ კარდენახში. გადმოცემის მიხედვით, ამ სოფელში
+                  ყოველ კარზე ვენახი იყო და მისი სახელწოდებაც აქედან მოდის -
+                  “კარი” და “ვენახი” - “კარდენახი”.
+                  <br />
+                  <br /> ამ ქარხანამ ჯერ კიდევ 1970 წელს მიიღო კავკასიის
+                  რეგიონის უმსხვილესი ღვინის საწარმოს წოდება.
+                </p>
+              </div>
+              <div className="home-page__button" style={{ marginTop: "40px" }}>
+                <button>წაკითხვა</button>
+              </div>
+            </div>
             <div className="home__img_ab">
               <img src={winePic2} alt="" />
             </div>
@@ -40,7 +75,21 @@ function HomePage() {
             <div className="home__img_new">
               <img src={winePic3} alt="" />
             </div>
-            <div className="home-page__new_desc home_descr"></div>
+            <div className="home-page__new_desc home_descr">
+              <div className="home-page__header">
+                <p className="bold__header">სიახლეები</p>
+              </div>
+              <hr id="home_hr_txt" />
+              <div className="home-page__description">
+                <p>
+                  ალაზნის ღვინის მეხსიერება მოდის რამოდენიმე ათწლეული და მას
+                  აქვს დიდი ისტორია, რომელიც შენარჩუნებული იქნა მთელი ეს დრო.
+                </p>
+              </div>
+              <div className="home-page__button">
+                <button>წაკითხვა</button>
+              </div>
+            </div>
           </div>
           <div className="home-page__products">
             <div className="home__img_pro">
@@ -70,6 +119,11 @@ function HomePage() {
           <div className="home-page__staff">
             <div className="staff">
               <div className="staff-header">ჩვენი პერსონალი</div>
+
+              <div className="staff-secondary-header">
+                და მათი რჩეული ღვინოები
+              </div>
+              <hr id="staff-hr" />
               <div className="staff-list">
                 <StaffDescription
                   fullName="ნიკა რამაზაშვილი"
@@ -85,7 +139,7 @@ function HomePage() {
                 />
                 <StaffDescription
                   fullName="ნატა გაბუნია"
-                  jobTitle="პიარ მენეჯერი"
+                  jobTitle="პიარ&nbsp;მენეჯერი"
                 />
                 <StaffDescription
                   fullName="ანი ტუღუში"

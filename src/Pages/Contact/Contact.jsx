@@ -14,20 +14,27 @@ import DistributorDetails from "./Component/DistributorDetails";
 function Contact() {
   const [distributorInfo, setDistributorInfo] = useState(null);
 
+  const scrollToBottom = (e) => {
+    window.scrollTo(0, document.documentElement.scrollHeight);
+  };
   const setChina = (e) => {
     setDistributorInfo(china);
+    scrollToBottom();
   };
 
   const setRussia = (e) => {
     setDistributorInfo(rusia);
+    scrollToBottom();
   };
 
   const setCzech = (e) => {
     setDistributorInfo(czech);
+    scrollToBottom();
   };
 
   const setPoland = (e) => {
     setDistributorInfo(poland);
+    scrollToBottom();
   };
 
   const [useLocation, setLocation] = useState(officeLocation);
@@ -147,26 +154,15 @@ function Contact() {
         <div className="ct-distributors-country">
           <div className="ct-distributor-china" onClick={setChina}>
             <p>ჩინეთი</p>
-            <FaAngleRight className="ct-angle-left" />
-            <div className="ct-distributor-china-hidden">
-              <p>ჩინეთი</p>
-              <div className="distributor-details">
-                <span></span>
-                <p></p>
-              </div>
-            </div>
           </div>
           <div className="ct-distributor-russia" onClick={setRussia}>
             <p>რუსეთი</p>
-            <FaAngleRight className="ct-angle-left" />
           </div>
           <div className="ct-distributor-czech " onClick={setCzech}>
             <p>ჩეხეთი</p>
-            <FaAngleRight className="ct-angle-left" />
           </div>
           <div className="ct-distributor-poland" onClick={setPoland}>
             <p>პოლონეთი</p>
-            <FaAngleRight className="ct-angle-left" />
           </div>
         </div>
 

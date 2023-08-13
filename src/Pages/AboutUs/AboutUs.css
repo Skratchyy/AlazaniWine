@@ -114,22 +114,38 @@
 }
 
 .staff{
-    background-color: #f1f1f1;
-    height: 350px;
+    padding-top: 40px;
+    color: white;
+    background-color: #1d245b;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
 }
+.staff-secondary-header{
+   
+    color: gray;
+    font-family:  FiraGO-Regular;
+    font-size: 25px;
+}
+
+#staff-hr{
+    margin-top: 30px;
+    width: 80%;
+    height: 1px;
+    background-color: gray;
+    border: none !important;
+}
 .staff-header{
-    font-size: 50px;
+    font-size: 60px;
     font-family:  FiraGO-Regular;
     margin-top: 20px;
 }
 .staff-list{
     display: flex;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 150px;
     align-items: center;
     justify-content: center;    
 }

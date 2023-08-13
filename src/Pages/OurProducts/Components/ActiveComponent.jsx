@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useResolvedPath, useMatch, useLocation } from "react-router";
+import { useLocation } from "react-router";
 
 const ActiveProductItem = ({ name, result, currentLanguage }) => {
   const location = useLocation();

@@ -23,22 +23,38 @@
 }
 
 .staff-name{
+    
+    color: gray;
     font-size: 15px;
     font-family: 'GLKirovi-Bold';
 }
 
 .staff-favWine{
     height: auto;
+    min-height: 200px;
+    width: 60%;
     font-size: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+}
+.staff-favWine>img{
+    width: 40px;
+
+}
+
+.staff-email{
+    margin-top: -35px;
+    color: gray;
+    font-size: 17px;
+    font-family: "GLKirovi-Bold";
+    font-weight: 100;
+    font: lowercase;
 }
 .forP{
     margin-top: 20px;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(23,31,69,255);
     width: 120%;
     height: 30px;
     border-radius: 5px;
@@ -51,7 +67,7 @@
 
 @media screen and (max-width: 768px)  {
     .staff-wrapper{
-        height: 250px;
+        height: 350px;
         border-bottom: 1px groove black;
     }
     

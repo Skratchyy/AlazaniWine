@@ -52,12 +52,21 @@ function AboutUs() {
       </div>
       <div className="staff">
         <div className="staff-header">ჩვენი პერსონალი</div>
+        <div className="staff-secondary-header">და მათი რჩეული ღვინოები</div>
+        <hr id="staff-hr" />
         <div className="staff-list">
           <StaffDescription fullName={fullName} jobTitle={position} />
-          <StaffDescription fullName="ნიკა რამაზაშვილი" jobTitle="მენეჯერი" />
+          <StaffDescription
+            fullName="ნიკა რამაზაშვილი"
+            jobTitle="მენეჯერი"
+            email="Example@gmail.com"
+          />
           <StaffDescription fullName="ლანა დათაია" jobTitle="ფინანსისტი" />
           <StaffDescription fullName="გიო მიქელაშვილი" jobTitle="მომწოდებელი" />
-          <StaffDescription fullName="ნატა გაბუნია" jobTitle="პიარ მენეჯერი" />
+          <StaffDescription
+            fullName="ნატა გაბუნია"
+            jobTitle="პიარ&nbsp;მენეჯერი"
+          />
           <StaffDescription fullName="ანი ტუღუში" jobTitle="დისტრიბუტორი" />
         </div>
       </div>

@@ -170,3 +170,39 @@
 .ct-distributor-china-hidden{
     opacity: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .ct-information{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .ct-description{
+       margin: 0;
+       align-items: center;
+       background-color: rgba(25, 33, 85, 0.4);
+       
+       width: 98%;
+    }
+    .ct-map{
+        width: 98%;
+        align-items: center;
+        justify-content: center;
+    }
+    .ct-all-locations{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 40px;
+        font-size: 25px;
+    }
+    .ct-socials{
+        margin-bottom: 40px;
+    }
+    .ct-distributors-country{
+        flex-direction: column;
+    }
+    .ct-distributor-poland{
+        margin-left: 30px;
+    }
+}

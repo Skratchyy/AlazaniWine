@@ -1,3 +1,20 @@
+@font-face {
+	font-family: Bebas-Neue;
+	src: url("../../assets/fonts/bebas-neue-bold.otf")
+}
+@font-face {
+	font-family: Galaktioni;
+	src: url("../../assets/fonts/DM-Galaktioni-UNI.ttf")
+}
+@font-face {
+	font-family: webFont;
+	src: url("../../assets/fonts/bpg_web_002.ttf")
+}
+@font-face {
+    font-family: Gilori-geo;
+    src: url("../../assets/fonts/Gilroy\ GEO\ Heavy.ttf");
+}
+
 #home_bg1{
     width: 60%;
     margin-top: 100px;
@@ -33,13 +50,10 @@
     background-color: #192155;
     position: relative;
     z-index: 5;
-    
-    height: 30%;
-    top:-80%;
-    left: 45%;
-    height: 70%;
-    width: 53%;
-
+    padding: 100px;
+  
+    height: 55%;
+    width: 40%;
 }
 .home-page__memory{
     width: 100%;
@@ -47,12 +61,14 @@
     z-index: 1;
     position: relative;
     top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .home__img_memory{
-    width: 55%;
-    height: 90%;
+    width: 48%;
+    height: 85%;
     left: 2%;
-    background-color: aliceblue;
     z-index: 2;
     position: relative;
 }
@@ -60,6 +76,7 @@
 .home__img_memory>img{
         width: 100%;
         height: 100%;
+        object-fit: cover;
 }
 .content_actual{
     position: absolute;
@@ -77,16 +94,17 @@
 }
 
 .home__img_ab{
-    width: 85%;
-    height: 90%;
+    width: 90%;
+    height: 88%;
     position: relative;
     right: 2%;
-    background-color: aliceblue;
     z-index: 1;
+    
 }
 .home__img_ab>img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .home-page__about_desc{
     background-color: #192155;
@@ -94,7 +112,8 @@
     z-index: 2;
     width: 75%;
     left: 2%;
-    height: 70%;
+    padding: 80px;
+    height: 60%;
     padding-left: 5%;
 }
 
@@ -112,7 +131,7 @@
 
 .home__img_new{
     width: 55%;
-    height: 90%;
+    height: 88%;
     left: 2%;
     background-color: aliceblue;
     z-index: 2;
@@ -121,6 +140,7 @@
 .home__img_new>img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .home-page__new_desc{
@@ -129,7 +149,8 @@
     z-index: 5;
     height: 30%;
     right: 2%;
-    height: 70%;
+    padding: 80px;
+    height: 60%;
     width: 53%;
 }
 
@@ -166,4 +187,121 @@
 
 .home-page__staff{
     margin-top: 110px;
+}
+
+.home-page__header{
+    display: flex;
+    color: white;
+}
+
+.bold__header{
+    margin-right: 20px;
+    font-size: 50px;
+    font-family: "Bebas-Neue";
+}
+
+.italic__header{
+    font-family: "Galaktioni";
+    font-size: 50px;
+}
+
+#home_hr_txt{
+   position: absolute;
+   width: 100%;
+   left: 0%;
+   height: 1px;
+   background-color: gray;
+   border: none;
+}
+
+.home-page__description{
+    margin-top: 80px;
+    font-family: "webFont";
+    color: white;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 100;
+}
+
+.home-page__button{
+    margin-top: 90px;
+}
+
+.home-page__button>button{
+    width: 300px;
+    height: 80px;
+    border: 0;
+    font-family: "Gilori-geo";
+    font-size: 20px;
+    color: #1d245b;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.home-page__button>button:hover{
+    background-color: #192155;
+    color: white;
+    border: 1px solid white;
+}
+
+.about__home__txt{
+    font-size: 22px;
+}
+
+@media screen and (max-width: 1400px) {
+    .about__home__txt{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .home-page__about_desc{
+        height: 65%;
+    }
+    .home-page__description{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 768px) {
+    /* Mobile Version */
+    .home-page__memory{
+        flex-direction: column;
+        width: 100%;
+    }
+    .home-page__memory_desc{
+        width: calc(98% - 200px);
+        padding: 0;
+       padding: 100px;
+    }
+    .home__img_memory{
+        width: 98%;
+        left: 0%;
+    }
+    .home-page__about{
+        flex-direction: column-reverse;
+        margin-top: 200px;
+    }
+    .home-page__about_desc{
+        width: 82%;
+        left: 0%;
+    }
+    .home__img_ab{
+        width: 98%;
+        right: 0;
+        height: 60%;
+    }
+    .home-page__news{
+        flex-direction: column;
+        margin-top: 350px;
+    }
+    .home__img_new{
+        width: 98%;
+        height: 60%;
+        left: 0;
+    }
+    .home-page__new_desc{
+        width: 76%;
+        right: 0;
+    }
+    .home-page__products{
+        margin-top: 800px;
+    }
 }
