@@ -5,7 +5,7 @@ import mainPic from "../../assets/about-us-image-main.png";
 import { Link } from "react-router-dom";
 import { FaAngleLeft } from "react-icons/fa";
 import { useState, useEffect } from "react";
-
+import Loader from "../../Components/loader/loader"
 function AboutUs() {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -22,7 +22,7 @@ function AboutUs() {
     get_data();
   }, []);
 
-  if (isLoading) return "Loading......";
+  if (isLoading) return <Loader/>;
 
   const componentHeader = "ჩვენს შესახებ";
   const fullName = "გუგა რამიშვილი";

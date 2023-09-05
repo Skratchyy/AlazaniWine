@@ -4,6 +4,7 @@ import { useLocation } from "react-router";
 import { useState, useEffect } from "react";
 import ActiveProductItem from "../Components/ActiveComponent";
 import ActiveBrand from "../Components/ActiveBrand";
+import Loader from "../../../Components/loader/loader";
 function ProductDetails(porps) {
   const currentPath = useLocation().pathname;
   const curentId = currentPath.split("/")[4];
@@ -60,7 +61,7 @@ function ProductDetails(porps) {
     getBrands();
   }, [currentPath]);
   console.log(brands);
-  if (isLoading) return "Loading...";
+  if (isLoading) return <Loader/>;
 
   return (
     <>
@@ -119,7 +120,7 @@ function ProductDetails(porps) {
           })}
         </div>
       </div>
-      );
+      
     </>
   );
 }

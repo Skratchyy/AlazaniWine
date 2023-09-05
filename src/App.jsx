@@ -19,6 +19,7 @@ import { Navigate } from "react-router-dom";
 import BrandDetails from "./Pages/OurProducts/ProductDetails/BrandDetails";
 import AdminNews from "./Admin/Dashboard/News/News";
 import { useState, useEffect } from "react";
+import Loader from "./Components/loader/loader";
 function App() {
   const [brandName, setBrandName] = useState("");
   const [isLoading, setIsloading] = useState(true);
@@ -35,7 +36,7 @@ function App() {
     getBrandName();
   }, []);
 
-  if (isLoading) return "Loading...";
+  if (isLoading) return <Loader/>;
 
   console.log();
 

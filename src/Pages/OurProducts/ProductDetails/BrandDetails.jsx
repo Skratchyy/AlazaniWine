@@ -1,6 +1,7 @@
 import ProductDetails from "./ProductDetails";
 import { useState, useEffect } from "react";
 import { useLocation, Navigate } from "react-router";
+import Loader from "../../../Components/loader/loader";
 export default function BrandDetails() {
   const location = useLocation().pathname;
   const currentLocation = location.split("/")[3];
@@ -21,7 +22,7 @@ export default function BrandDetails() {
   useEffect(() => {
     fetchBrands();
   }, []);
-  if (isLoading) return "Loading...";
+  if (isLoading) return <Loader/>;
   const toNavigate = location + "/" + brands[0]._id;
   return <Navigate to={toNavigate} />;
 }

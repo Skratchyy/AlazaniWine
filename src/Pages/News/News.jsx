@@ -3,7 +3,9 @@ import NewsCard from "./Components/NewsCard";
 import mainAlazaniText from "../../assets/about-bg-writing.png";
 import "./News.css";
 import { useState, useEffect } from "react";
+import Loader from "../../Components/loader/loader";
 const componentHeader = "სიახლეები";
+
 
 function News() {
   const [data, setData] = useState(null);
@@ -21,7 +23,7 @@ function News() {
     getData();
   }, []);
 
-  if (isLoading) return "Loading...";
+  if (isLoading) return <Loader/>;
 
   return (
     <div className="News-bg">

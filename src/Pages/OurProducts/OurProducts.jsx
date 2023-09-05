@@ -2,10 +2,10 @@ import Header from "../../Components/Header/Header";
 import "./OurProducts.css";
 import { useState, useEffect } from "react";
 import Products from "./Components/Producs";
+import Loader from "../../Components/loader/loader";
 import { useLocation } from "react-router";
 function News() {
   const isLocation = useLocation().pathname;
-  const currentLanguage = isLocation[1] + isLocation[2];
   const renderKa = isLocation[1] + isLocation[2] === "ka";
 
   const [brands, setBrands] = useState([]);
@@ -22,7 +22,7 @@ function News() {
     fetchBrands();
   }, []);
 
-  if (isLoading) return "Loading...";
+  if (isLoading) return <Loader/>;
 
   const currentLocation = "ბრენდები";
   const currentLocationEn = "Brands";

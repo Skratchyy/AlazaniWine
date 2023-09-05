@@ -38,11 +38,12 @@
 .home-page__content{
     display: flex;
     flex-direction: column;
-    height: auto;
+    
     background-color: #1d245b;
     min-height: 500vh;
     width: 100%;
     margin-top: -4px;
+    height: auto;
     position: absolute;
 }
 
@@ -303,5 +304,107 @@
     }
     .home-page__products{
         margin-top: 800px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .staff {
+        height: 85vh;
+    }
+    .home-page__content{
+        height: 555vh;
+    }
+    .home-page__news{
+        height: 730px;
+    }
+    .home-page__about{
+        height: 730px;
+    }
+    .home-page__memory{
+        height: 730px;
+    
+    }
+    .home-page__description{
+        margin-top: 50px;
+    }
+    .home-page__button{
+        margin-top: 50px;
+    }
+    .home__img_ab{
+        height: 92%;
+    }
+    .home__img_memory{
+        height: 90%;
+    }
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .home-page__memory{
+        top: 155px;
+    }
+    .home-page__memory_desc{
+        width: auto;
+        height: 70%;
+        padding: 0;
+        padding: 0 0 31px 30px;
+    }
+    .home-page__about{
+        top: 350px;
+    }
+    .home__img_ab{
+        height: 40%;
+    }
+
+    .home-page__about_desc{
+    padding: 35px;
+    height: 100%;
+    }
+    .home-page__news{
+        margin-top: 125px;
+    }
+    .home__img_new{
+        height: 45%;
+    }
+    .home-page__new_desc{
+        padding: 0;
+        padding: 0 44px 114px 44px;
+    }
+    .home__img_pro>img{
+        width: 280px;
+    }
+    .home_transparent_description>img{
+        width: 100%
+    }
+    .home_transparent_description{
+        width: 94%;
+        padding: 3%;
+        right: 0;
+        bottom: -22%;
+    }
+    .staff{
+        height: auto;
+    }
+    .staff-header{
+        text-align: center;
+    }
+    .staff-list{
+        margin-top: 0;
+    }
+    #home_bg2{
+        width: 350px;
+        margin-left: 0%;
+    }
+
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .staff-list{
+        margin-top: 100px;
+    }
+    .home-page__memory{
+        height: 800px;
+        top: 100px;
+    }
+    .home-page__content{
+        height: auto;
     }
 }
