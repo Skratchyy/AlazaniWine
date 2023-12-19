@@ -22,12 +22,11 @@ function News() {
     fetchBrands();
   }, []);
 
-  if (isLoading) return <Loader/>;
+  if (isLoading) return <Loader />;
 
   const currentLocation = "ბრენდები";
   const currentLocationEn = "Brands";
 
-  console.log(brands);
   return (
     <>
       {renderKa ? (

@@ -1,4 +1,6 @@
+import axios from "axios";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "../../Components/Header/Header";
 import { shopLocation, factoryLocation, officeLocation } from "./locations";
 import { FaAngleRight } from "react-icons/fa";
@@ -11,44 +13,55 @@ import { useState } from "react";
 import { china, czech, rusia, poland } from "./distrubutorContacts";
 import "./Contact.css";
 import DistributorDetails from "./Component/DistributorDetails";
+const baseURL = "http://localhost:5000";
 function Contact() {
+  const [distributorClicked, setDistributorClicked] = useState(false);
   const [distributorInfo, setDistributorInfo] = useState(null);
+  const [fetchedDistributors, setFetchedDistributors] = useState([]);
+  const [socials, setSocials] = useState([]);
+  useEffect(() => {
+    axios.get(`${baseURL}/distributors`).then((response) => {
+      setFetchedDistributors(response.data);
+    });
+  }, []);
+  useEffect(() => {
+    axios.get(`${baseURL}/contact`).then((response) => {
+      setSocials(response.data[0]);
+    });
+  }, []);
 
-  const scrollToBottom = (e) => {
+  const scrollToBottom = () => {
     window.scrollTo(0, document.documentElement.scrollHeight);
   };
-  const setChina = (e) => {
-    setDistributorInfo(china);
-    scrollToBottom();
-  };
 
-  const setRussia = (e) => {
-    setDistributorInfo(rusia);
-    scrollToBottom();
-  };
+  const distributorClickHandler = (e) => {
+    // set the click handler fpr the styling purposes
 
-  const setCzech = (e) => {
-    setDistributorInfo(czech);
-    scrollToBottom();
-  };
+    if (distributorInfo && distributorInfo._id === e) {
+      setDistributorClicked(!distributorClicked);
+    } else {
+      setDistributorClicked(true);
+    }
 
-  const setPoland = (e) => {
-    setDistributorInfo(poland);
+    // find the distributor that has clicked
+    const details = fetchedDistributors.find(
+      (distributor) => distributor._id === e
+    );
+    // update the distributor details
+    setDistributorInfo(details);
     scrollToBottom();
   };
 
   const [useLocation, setLocation] = useState(officeLocation);
 
-  const setOffice = (e) => {
-    setLocation(officeLocation);
-  };
-
-  const setFactory = (e) => {
-    setLocation(factoryLocation);
-  };
-
-  const setShop = (e) => {
-    setLocation(shopLocation);
+  const updateLocation = (e) => {
+    if (e === "Office") {
+      setLocation(officeLocation);
+    } else if (e === "Factory") {
+      setLocation(factoryLocation);
+    } else {
+      setLocation(shopLocation);
+    }
   };
 
   let fbLink = "https://www.facebook.com/alazaniwine/";
@@ -58,7 +71,7 @@ function Contact() {
   const componentHeader = "კონტაქტი";
   const renderKa = true;
   return (
-    <div className="ct-bg">
+    <div className={!distributorClicked ? "ct-bg" : "ct-bg active"}>
       <Header
         shouldRender={true}
         geLang={renderKa}
@@ -75,7 +88,10 @@ function Contact() {
               <span>
                 <FaMapMarkerAlt />
               </span>
-              <button className="ct-location-name" onClick={setFactory}>
+              <button
+                className="ct-location-name"
+                onClick={() => updateLocation("Factory")}
+              >
                 ქარხანა
               </button>
             </div>
@@ -83,7 +99,10 @@ function Contact() {
               <span>
                 <FaMapMarkerAlt />
               </span>
-              <button className="ct-location-name" onClick={setOffice}>
+              <button
+                className="ct-location-name"
+                onClick={() => updateLocation("Office")}
+              >
                 ოფისი
               </button>
             </div>
@@ -91,7 +110,10 @@ function Contact() {
               <span>
                 <FaMapMarkerAlt />
               </span>
-              <button className="ct-location-name" onClick={setShop}>
+              <button
+                className="ct-location-name"
+                onClick={() => updateLocation("Shop")}
+              >
                 მაღაზია
               </button>
             </div>
@@ -100,7 +122,7 @@ function Contact() {
             <div className="ct-fb">
               <Link
                 className="ct-links"
-                to={fbLink}
+                to={socials.facebook_page}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -112,7 +134,7 @@ function Contact() {
             <div className="ct-fb">
               <Link
                 className="ct-links"
-                to={igLink}
+                to={socials.instagram_page}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -124,7 +146,7 @@ function Contact() {
             <div className="ct-fb">
               <Link
                 className="ct-links"
-                to={email}
+                to={`mailto://${socials.company_email}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -136,7 +158,7 @@ function Contact() {
             <div className="ct-fb">
               <Link
                 className="ct-links"
-                to={phoneNumber}
+                to={`tel://${socials.company_number}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -149,32 +171,41 @@ function Contact() {
         </div>
         <div className="ct-map">{useLocation}</div>
       </div>
-      <div className="ct-distributors">
-        <div className="ct-distributors-header">დისტრიბუტორები</div>
-        <div className="ct-distributors-country">
-          <div className="ct-distributor-china" onClick={setChina}>
-            <p>ჩინეთი</p>
-          </div>
-          <div className="ct-distributor-russia" onClick={setRussia}>
-            <p>რუსეთი</p>
-          </div>
-          <div className="ct-distributor-czech " onClick={setCzech}>
-            <p>ჩეხეთი</p>
-          </div>
-          <div className="ct-distributor-poland" onClick={setPoland}>
-            <p>პოლონეთი</p>
-          </div>
-        </div>
 
-        <div className="dist-details">
-          {distributorInfo ? (
-            distributorInfo.map((info) => {
-              return <DistributorDetails obj={info} />;
-            })
+      <div className="ct-distributors">
+        <p className="ct-distributors-header">დისტრიბუტორები</p>
+        <div className="ct-distributors-country">
+          {fetchedDistributors.map((distributor) => {
+            return (
+              <div
+                className={
+                  !distributorClicked
+                    ? "ct-distributor-russia"
+                    : "ct-distributor-russia active"
+                }
+                onClick={() => distributorClickHandler(distributor._id)}
+                key={distributor._id}
+              >
+                {distributor.country_ka}
+              </div>
+            );
+          })}
+        </div>
+        {distributorClicked ? (
+          <div className="dist-details">
+            {distributorInfo.locations.map((loc) => {
+              // console.log(loc);
+              return <DistributorDetails obj={loc} key={loc._id} />;
+            })}
+            {/* {distributorInfo ? (
+            <DistributorDetails obj={distributorInfo} />
           ) : (
             <></>
-          )}
-        </div>
+          )} */}
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

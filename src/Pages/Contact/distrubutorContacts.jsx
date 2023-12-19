@@ -12,7 +12,7 @@ const rusia = [
     header: "METRO CASH AND CARRY",
     location:
       "142407, Moscow region, Noginsk district, territory of Noginsk-Technopark 8B",
-    number: "8-800-700-10-77",
+    number: "8-830-700-10-77",
     mail: "druzhba@qq.com",
     link: "https://www.metro-cc.ru/",
   },

@@ -22,9 +22,11 @@
         -o-background-size: cover;
         position: absolute;
         color: white;
+    height: 100%;
+    }
+.ct-bg.active {
+    height: auto;
 }
-  
-
 .empty{
         height: 350px;
 }
