@@ -1,29 +1,22 @@
 import logo from "../../assets/logo.svg";
 import logo_txt from "../../assets/bg-text-colorless.png";
 import geFlagActive from "../../assets/flag-ge-active.svg";
-import geFlag from "../../assets/flag-ge-bw.svg";
-import enFlagActive from "../../assets/flag-en-active.svg";
 import enFlag from "../../assets/flag-en-bw.svg";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./AgeRestriction.css";
 function AgeRestriction() {
-  const location = useLocation();
-  const baseUrl = window.location.origin;
-  const kaLangCheck = location.pathname == "/";
-  console.log(kaLangCheck);
-  const currentLocation = `${baseUrl}${location.pathname}`;
   const handleYes = () => {
-    window.location.href = `${currentLocation}/home`;
+    window.location.pathname = `/ka/home`;
   };
   const handleNo = () => {
-    window.location.href = `${currentLocation}/404`;
+    window.location.reload();
   };
-  const handleYesEn = () => {
-    window.location.href = `${currentLocation}/home`;
-  };
-  const handleNoEn = () => {
-    window.location.href = `${currentLocation}/404`;
-  };
+  // const handleYesEn = () => {
+  //   window.location.href = `/home`;
+  // };
+  // const handleNoEn = () => {
+  //   window.location.href = `/en`;
+  // };
 
   return (
     <div className="res-bg">
@@ -56,7 +49,7 @@ function AgeRestriction() {
           <Link className="res-ka-flag" to="/">
             <img src={geFlagActive} alt="Flag" className="res-flag" />
           </Link>
-          <Link className="res-en-flag" to={baseUrl + "/en"}>
+          <Link className="res-en-flag" to={"/en"}>
             <img src={enFlag} alt="Flag" className="res-flag" />
           </Link>
         </div>

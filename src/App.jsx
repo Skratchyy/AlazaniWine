@@ -15,59 +15,53 @@ import Dashboard from "./Admin/Dashboard/Dashboard";
 import AboutUsAdmin from "./Admin/Dashboard/About-Us-admin/About-Us-Admin";
 import WineMemoryAdmin from "./Admin//Dashboard/Wine-Memoru-admin/Wine-memory-admin";
 import { Route, Routes } from "react-router-dom";
-import { Navigate } from "react-router-dom";
 import BrandDetails from "./Pages/OurProducts/ProductDetails/BrandDetails";
 import AdminNews from "./Admin/Dashboard/News/News";
-import { useState, useEffect } from "react";
-import Loader from "./Components/loader/loader";
+import ProductAdminComponent from "./Admin/Dashboard/Products/AdminProducts";
+import BrandAdmin from "./Admin/Dashboard/Products/BrandAdmin";
 function App() {
-  const [brandName, setBrandName] = useState("");
-  const [isLoading, setIsloading] = useState(true);
-
-  const getBrandName = async () => {
-    const name = await (
-      await fetch(`https://alazanibackend.onrender.com/brands`)
-    ).json();
-    setIsloading(false);
-    setBrandName(name);
-  };
-
-  useEffect(() => {
-    getBrandName();
-  }, []);
-
-  if (isLoading) return <Loader/>;
-
-  console.log();
-
   return (
     <Routes>
-      <Route index element={<KaRoutes />} />
-      <Route path="/admin-panelN3553/login" element={<SignIn />} />
+      {/* Admin Routes */}
       <Route path="/admin-panelN3553">
-        <Route index={true} element={<Dashboard SignedIn={true} />}></Route>
+        <Route index={true} element={<Dashboard SignedIn={true} />} />
+        <Route path="login" element={<SignIn />} />
+
+        <Route path="brands">
+          {/* Make sure to add an index route for the "brands" route */}
+          <Route index={true} element={<BrandAdmin />} />
+
+          {/* Update the nested route for "products" */}
+          <Route path=":products" element={<ProductAdminComponent />} />
+        </Route>
+
         <Route path="about-us" element={<AboutUsAdmin />} />
         <Route path="wine-memory" element={<WineMemoryAdmin />} />
         <Route path="news" element={<AdminNews />} />
       </Route>
 
-      <Route path="/ka" element={<AgeRestriction />} />
-      <Route path="/ka/home" element={<HomePage />} />
-      <Route path="/ka/wine-memory" element={<WineMemory />} />
-      <Route path="/ka/news" element={<News />} />
-      <Route path="/ka/news/:id" element={<FullNews />} />
-      <Route path="/ka/products">
-        <Route index={true} element={<OurProducts />} />
-        <Route path=":id">
-          <Route index={true} element={<BrandDetails />} />
-          <Route path=":id" element={<ProductDetails />} />
+      {/* Language Routes */}
+      <Route index element={<KaRoutes />} />
+      <Route path="/ka">
+        <Route index={true} element={<AgeRestriction />} />
+        <Route path="home" element={<HomePage />} />
+        <Route path="wine-memory" element={<WineMemory />} />
+        <Route path="news" element={<News />} />
+        <Route path="news/:id" element={<FullNews />} />
+        <Route path="products">
+          <Route index={true} element={<OurProducts />} />
+          <Route path=":id">
+            <Route index={true} element={<BrandDetails />} />
+            <Route path=":id" element={<ProductDetails />} />
+          </Route>
         </Route>
+        <Route path="contact" element={<Contact />} />
+        <Route path="about-us" element={<AboutUs />} />
+        <Route path="blog" element={<Blog />} />
+        <Route path="menu" element={<Menu />} />
       </Route>
 
-      <Route path="/ka/contact" element={<Contact />} />
-      <Route path="/ka/about-us" element={<AboutUs />} />
-      <Route path="/ka/blog" element={<Blog />} />
-      <Route path="/ka/menu" element={<Menu />} />
+      {/* English Routes */}
       <Route path="/en">
         <Route index={true} element={<AgeRestriction />} />
         <Route path="products" element={<AgeRestriction />} />

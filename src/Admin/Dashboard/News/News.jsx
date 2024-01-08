@@ -1,6 +1,8 @@
 import Modal from "react-modal";
+import "./news.css";
+import image from "../../../assets/about-us-image-main.png";
 import { useState } from "react";
-import ReactDOM from "react-dom";
+import NewsCard from "./newsCard.jsx";
 const customStyles = {
   content: {
     top: "50%",
@@ -13,17 +15,10 @@ const customStyles = {
 };
 
 function AdminNews() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  let subtitle;
   function closeModal() {
     setIsOpen(false);
-  }
-  let subtitle;
-  const [modalIsOpen, setIsOpen] = useState(false);
-  const [modalIsOpen2, setIsOpen2] = useState(false);
-  function openModal2() {
-    setIsOpen2(true);
-  }
-  function closeModal2() {
-    setIsOpen2(false);
   }
 
   function openModal() {
@@ -32,14 +27,22 @@ function AdminNews() {
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
-    subtitle.style.color = "#f00";
+    subtitle.style.color = "#000";
   }
 
   return (
     <div className="admin-about-us">
       <div className="admin-about-form">
-        <h1>News</h1>
-        <button onClick={openModal}>სიახლის დამატება</button>
+        <button
+          className="go_back_news"
+          onClick={() => (window.location.pathname = "/admin-panelN3553")}
+        >
+          უკან დაბრუნება
+        </button>
+        <h1>სიახლეები</h1>
+        <button onClick={openModal} className="add_news">
+          სიახლის დამატება
+        </button>
         <Modal
           isOpen={modalIsOpen}
           onAfterOpen={afterOpenModal}
@@ -47,8 +50,10 @@ function AdminNews() {
           style={customStyles}
           contentLabel="Example Modal"
         >
-          <h2 ref={(_subtitle) => (subtitle = _subtitle)}>სიახლე</h2>
-          <button onClick={closeModal}>დახურვა</button>
+          <h2 ref={(_subtitle) => (subtitle = _subtitle)}>სიახლის დამატება</h2>
+          <button onClick={closeModal} className="close_modal">
+            დახურვა
+          </button>
           <div></div>
           <form style={{ display: "flex", flexDirection: "column" }}>
             <label htmlFor="title-in-ge">სიახლის სათაური</label>
@@ -70,25 +75,13 @@ function AdminNews() {
             <label htmlFor="title-in-en">ფოტო</label>
             <input type="file" name="title-in-en" />
 
-            <button>დამატება</button>
+            <button className="submit_btn">დამატება</button>
           </form>
         </Modal>
 
-        <button
-          onClick={openModal2}
-          style={{ marginBottom: "50px", marginTop: "50px" }}
-        >
-          სიახლის წაშლა
-        </button>
-
-        <Modal
-          isOpen={modalIsOpen2}
-          onRequestClose={closeModal2}
-          style={customStyles}
-          contentLabel="Example Modal"
-        >
-          Hi
-        </Modal>
+        <main>
+          <NewsCard image={image}></NewsCard>
+        </main>
       </div>
     </div>
   );

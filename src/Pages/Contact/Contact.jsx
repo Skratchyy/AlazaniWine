@@ -3,14 +3,12 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "../../Components/Header/Header";
 import { shopLocation, factoryLocation, officeLocation } from "./locations";
-import { FaAngleRight } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { useState } from "react";
-import { china, czech, rusia, poland } from "./distrubutorContacts";
 import "./Contact.css";
 import DistributorDetails from "./Component/DistributorDetails";
 const baseURL = "http://localhost:5000";
@@ -64,10 +62,6 @@ function Contact() {
     }
   };
 
-  let fbLink = "https://www.facebook.com/alazaniwine/";
-  let igLink = "https://www.instagram.com/alazani_winery/";
-  let email = "mailto://gabichvadzezura@gmail.com";
-  let phoneNumber = "tel://+995557556555";
   const componentHeader = "კონტაქტი";
   const renderKa = true;
   return (

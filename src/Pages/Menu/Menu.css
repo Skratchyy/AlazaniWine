@@ -1,52 +1,41 @@
-
 @keyframes fadeInAnimation {
-    0% {
-        opacity: .5;
-        margin-left: -10px;
-    }
-    100%{
-        opacity: 1;
-        margin-left: 0;
-    }
-    
+  0% {
+    opacity: 0.5;
+    margin-left: -10px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
 }
 
-.menu{
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards
+.menu {
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-.menu-items{
-    width: 20%;
-    text-align: center;
-    position: relative;
-    cursor: pointer;
-   
-    
+.menu-items {
+  width: 20%;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: width 0.7s cubic-bezier(0.42, 0, 0.58, 1);
 }
-.some{
-    transition: width .7s cubic-bezier(.42, 0, .58, 1);
-}
-
-
 
 .menu-items:hover {
-    width: 20%
+  width: 25%;
 }
-.menu-item-wrapper{
-    display: flex;
-}
-
-
-@media screen and (max-width: 768px){
-    .menu-item-wrapper{
-        display: block;
-    }
-    .menu-items {
-        width: 100%;
-        height: 20vh;
-    }
-  
+.menu-item-wrapper {
+  display: flex;
 }
 
+@media screen and (max-width: 768px) {
+  .menu-item-wrapper {
+    display: block;
+  }
+  .menu-items {
+    width: 100%;
+    height: 20vh;
+  }
+}

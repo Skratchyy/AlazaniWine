@@ -5,11 +5,9 @@ import geFlagActive from "../../assets/flag-ge-active.svg";
 import enFlagActive from "../../assets/flag-en-active.svg";
 import { FaAngleLeft } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
-import { render } from "@testing-library/react";
-
 function Header({ shouldRender, geLang, Location, Goto }) {
   const CurrentLocation = useLocation().pathname;
-  const renderKa = CurrentLocation[1] + CurrentLocation[2] == "ka";
+  const renderKa = CurrentLocation[1] + CurrentLocation[2] === "ka";
 
   return (
     <>

@@ -8,6 +8,13 @@ function AboutUsAdmin() {
     console.log(e.target.files);
     setFile(URL.createObjectURL(e.target.files[0]));
   }
+
+  const cancelHandler = () => {
+    setFile("");
+    window.location.replace("/admin-panelN3553");
+  };
+
+  console.log(file);
   return (
     <div className="admin-about-us">
       <div className="admin-about-form">
@@ -46,11 +53,13 @@ function AboutUsAdmin() {
         />
         <div className="image-for-ab">
           <ImageUpload onChange={handleChange} />
-          <img src={file} style={{ width: "100px" }} />
         </div>
 
         <div className="submit-ab-u">
-          <button className="submit-ab-u-btn">დასრულება</button>
+          <button className="submit-ab-u-btn">შენახვა</button>
+          <button className="submit-ab-u-btn red" onClick={cancelHandler}>
+            გაუქმება
+          </button>
         </div>
       </div>
     </div>

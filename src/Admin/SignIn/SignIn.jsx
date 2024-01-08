@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./SignIn.css";
-import MD5 from "../MD5";
 
 function SignIn() {
   const [login, setLogin] = useState("");
@@ -8,8 +7,7 @@ function SignIn() {
 
   // Post Function to check the password
   const handleSubmit = async (u, p) => {
-    console.log(u);
-    console.log(MD5(p));
+    // must be done !
   };
 
   return (

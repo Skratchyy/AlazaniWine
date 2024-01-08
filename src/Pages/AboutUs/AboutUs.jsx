@@ -1,32 +1,28 @@
 import "./AboutUs.css";
 import StaffDescription from "./components/StaffDescription";
 import Header from "../../Components/Header/Header";
-import mainPic from "../../assets/about-us-image-main.png";
-import { Link } from "react-router-dom";
-import { FaAngleLeft } from "react-icons/fa";
+import axios from "axios";
 import { useState, useEffect } from "react";
-import Loader from "../../Components/loader/loader"
+import Loader from "../../Components/loader/loader";
 function AboutUs() {
   const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  async function get_data() {
-    const data = await (
-      await fetch("https://testnode-c6yj.onrender.com/about")
-    ).json();
-    setIsLoading(false);
-    setData(data);
-  }
+  const base_Url = "http://localhost:5000";
 
   useEffect(() => {
-    get_data();
+    axios
+      .get(`${base_Url}/about`)
+      .then((res) => setData(res.data[0]))
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
-  if (isLoading) return <Loader/>;
+  if (!data) return <Loader />;
 
   const componentHeader = "ჩვენს შესახებ";
   const fullName = "გუგა რამიშვილი";
   const position = "დირექტორი";
+  const Image = `${base_Url}/assets/about/${data.image}`;
 
   // Description არის ტექსტი რომელიც უნდა განთავსდეს About-Us გვერდზე
   return (
@@ -42,11 +38,13 @@ function AboutUs() {
       <div className="ab-empty"></div>
       <div className="ab-alazani-wrapper">
         <div className="ab-picture">
-          <img src={mainPic} alt="Logo" className="ab-about-picture" />
+          <img src={Image} alt="Logo" className="ab-about-picture" />
         </div>
         <div className="ab-description">
           <div className="ab-main-text">
-            <p className="ab-description-paragraph">{data.data}</p>
+            <p className="ab-description-paragraph">
+              {data ? data.description_ka : "1"}
+            </p>
           </div>
         </div>
       </div>

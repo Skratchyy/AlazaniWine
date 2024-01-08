@@ -15,7 +15,7 @@ function Dashboard({ SignedIn }) {
               <Link to="/admin-panelN3553/wine-memory">Wine Memory</Link>
             </li>
             <li>
-              <Link>About-Us</Link>
+              <Link to="/admin-panelN3553/news">news</Link>
             </li>
             <li>
               <Link>About-Us</Link>

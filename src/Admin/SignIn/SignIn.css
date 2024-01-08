@@ -1,74 +1,85 @@
-.SignIn-bg{ 
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.SignIn-bg {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.SignIn-wrapper {
+  box-shadow: -1px 6px 32px 3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 6px 32px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 6px 32px 3px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 250px;
+  width: 40%;
+  border-radius: 8px;
+}
+.SignIn-form {
+  width: 90%;
+}
+.userName {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  align-items: center;
+  width: 100%;
+}
 
+.userName > label {
+  font-size: 20px;
+  margin-bottom: 8px;
 }
-.SignIn-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    height: 250px;
-    width: 40%;
-    border-radius: 8px;
-    
+.passWord {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  align-items: center;
+  width: 100%;
 }
-.SignIn-form{
+
+.passWord > label {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.passWord > input {
+  font-size: 15px;
+  margin-bottom: 8px;
+  width: 80%;
+  height: 25px;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+.userName > input {
+  font-size: 15px;
+  margin-bottom: 8px;
+  width: 80%;
+  height: 25px;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+.SignIn-submit {
+  display: flex;
+  justify-content: center;
+}
+.SignIn-submit > button {
+  width: 30%;
+  height: 30px;
+}
+
+@media screen and (max-width: 563px) {
+  .SignIn-wrapper {
     width: 90%;
+  }
 }
-.userName{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-    align-items: center;
-    width: 100%;
-}
-
-.userName>label{
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-.passWord{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-    align-items: center;
-    width: 100%;
-}
-
-.passWord>label{
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-.passWord>input{
-    font-size: 15px;
-    margin-bottom: 8px;
-    width: 80%;
-    height: 25px;
-    border: 1px solid gray;
-    border-radius: 3px;
-}
-.userName>input{
-    font-size: 15px;
-    margin-bottom: 8px;
-    width: 80%;
-    height: 25px;
-    border: 1px solid gray;
-    border-radius: 3px;
-}
-
-.SignIn-submit{
-    display: flex;
-    justify-content: center;
-}
-.SignIn-submit>button{
-    width: 30%;
-    height: 30px;
-
-}
-

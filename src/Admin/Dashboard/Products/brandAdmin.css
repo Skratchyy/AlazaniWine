@@ -1,0 +1,78 @@
+section {
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.brands_admin_options {
+  width: 95%;
+  min-height: 100vh;
+  max-height: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand_card_container {
+  margin-bottom: 20px;
+  width: 70%;
+  height: 100px;
+  background-color: #c1c3c7;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.brand_card_container > img {
+  width: 7%;
+  padding-left: 10px;
+}
+
+.brand_controllers_admin > button {
+  height: 30px;
+  width: 150px;
+  background-color: lightsalmon;
+  border: 0;
+  margin-right: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+form > input {
+  width: 100%;
+}
+
+#brandLogo {
+  margin: 10px 0 10px 0;
+}
+
+#brandProduct {
+  margin: 10px 0 10px 0;
+}
+
+@media screen and (max-width: 660px) {
+  .brand_controllers_admin > button {
+    width: 100px;
+  }
+  .brand_controllers_admin {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .brand_card_container {
+    width: 98%;
+  }
+}
